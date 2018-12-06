@@ -1,6 +1,6 @@
 {
     "name": "@mattzgg/cucumber-js-cdt",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A function which converts a piece of plain data to a DateTable object used by cucumber.js",
     "license": "MIT",
     "repository": {
