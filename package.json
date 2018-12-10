@@ -16,5 +16,17 @@
     "dependencies": {
         "cucumber": "^5.0.3",
         "lodash": "^4.17.11"
+    },
+    "scripts": {
+        "example": "cucumber-js example/features/**/*.feature --require example/step_definitions/**/*.js"
+    },
+    "devDependencies": {
+        "eslint": "^5.10.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-config-prettier": "^3.3.0",
+        "eslint-plugin-cucumber": "^1.2.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-prettier": "^3.0.0",
+        "prettier": "^1.15.3"
     }
 }
