@@ -1,6 +1,6 @@
-const sinon = require('sinon');
+import sinon from 'sinon';
 
-module.exports = function() {
+export default function storageDouble() {
     const dao = {
         byId: sinon.stub(),
         update: sinon.stub(),
@@ -18,4 +18,4 @@ module.exports = function() {
         dao.update.callsArgWithAsync(1, null);
     };
     return storage;
-};
+}

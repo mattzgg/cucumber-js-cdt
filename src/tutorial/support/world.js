@@ -1,7 +1,7 @@
-const { setWorldConstructor } = require('cucumber');
-const createDataTable = require('@mattzgg/cucumber-js-cdt');
-const newStorage = require('./storageDouble');
-const orderSystemWith = require('../../lib/orders');
+import { setWorldConstructor } from 'cucumber';
+import createDataTable from '../../index';
+import newStorage from './storageDouble';
+import orderSystemWith from '../SuT/orders';
 
 function CustomWorld() {
     this.orderStorage = newStorage();

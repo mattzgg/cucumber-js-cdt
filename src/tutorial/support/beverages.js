@@ -1,4 +1,4 @@
-module.exports = {
+const beverages = {
     espresso() {
         return {
             id: 'espresso id',
@@ -18,3 +18,5 @@ module.exports = {
         };
     },
 };
+
+export default beverages;

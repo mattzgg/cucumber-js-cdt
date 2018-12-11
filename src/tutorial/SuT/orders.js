@@ -1,6 +1,6 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-module.exports = function orderSystemWith(orderDAO) {
+export default function orderSystemWith(orderDAO) {
     return {
         display(orderId) {
             return new Promise((resolve, reject) => {
@@ -90,4 +90,4 @@ module.exports = function orderSystemWith(orderDAO) {
             });
         },
     };
-};
+}

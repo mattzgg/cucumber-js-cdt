@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const { default: DataTable } = require('cucumber/lib/models/data_table');
+import _ from 'lodash';
+import DataTable from 'cucumber/lib/models/data_table';
 
-module.exports = function(examples) {
+export default function createDataTable(examples) {
     if (examples.length === 0) {
         return new DataTable({
             rows: [],
@@ -30,4 +30,4 @@ module.exports = function(examples) {
         { rows: [headerRow] },
     );
     return new DataTable(gherkinData);
-};
+}

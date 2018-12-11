@@ -1,5 +1,5 @@
-const _ = require('lodash');
-const beverages = require('./beverages');
+import _ from 'lodash';
+import beverages from './beverages';
 
 let counter = 0;
 
@@ -63,7 +63,7 @@ function actionFactoryFor(order) {
     };
 }
 
-module.exports = {
+const orders = {
     items(itemExamples) {
         return _.map(itemExamples.hashes(), asOrderItem);
     },
@@ -89,3 +89,5 @@ module.exports = {
         });
     },
 };
+
+export default orders;
