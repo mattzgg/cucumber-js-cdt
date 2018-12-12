@@ -1,6 +1,6 @@
 Feature: Customer displays order
 
-    In order to review the contents of my order and its price easily
+    In order to review which operations I can do with my order
     As a Customer
     I want to display the order
 
