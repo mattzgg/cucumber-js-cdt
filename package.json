@@ -18,8 +18,11 @@
         "lodash": "^4.17.11"
     },
     "scripts": {
-        "build": "babel src --out-dir lib",
-        "tutorial": "npm build && cucumber-js tutorial/features/**/*.feature --require lib/tutorial/step_definitions/**/*.js"
+        "clean": "rimraf lib",
+        "build": "npm run clean && babel src --out-dir lib",
+        "clean:tutorial": "rimraf tutorial/target",
+        "build:tutorial": "npm run build && npm run clean:tutorial && babel tutorial/src --out-dir tutorial/target",
+        "tutorial": "npm run build:tutorial && cucumber-js tutorial/features/**/*.feature --require tutorial/target/step_definitions/**/*.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.0",
@@ -34,6 +37,7 @@
         "eslint-plugin-import": "^2.14.0",
         "eslint-plugin-prettier": "^3.0.0",
         "prettier": "^1.15.3",
+        "rimraf": "^2.6.2",
         "sinon": "^7.2.0",
         "sinon-chai": "^3.3.0"
     }
