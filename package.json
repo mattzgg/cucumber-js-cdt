@@ -21,7 +21,7 @@
         "clean": "rimraf lib",
         "build": "npm run clean && babel src --out-dir lib",
         "clean:tutorial": "rimraf tutorial/target",
-        "build:tutorial": "npm run build && npm run clean:tutorial && babel tutorial/src --out-dir tutorial/target",
+        "build:tutorial": "npm run build && npm run clean:tutorial && babel tutorial/test --out-dir tutorial/target",
         "tutorial": "npm run build:tutorial && cucumber-js tutorial/features/**/*.feature --require tutorial/target/"
     },
     "devDependencies": {
